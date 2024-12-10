@@ -5,7 +5,7 @@ import { devtools } from 'frog/dev';
 // import { neynar } from 'frog/hubs'
 import { handle } from 'frog/next';
 import { serveStatic } from 'frog/serve-static';
-import { container, fontStyle } from '../styles/styles';
+import { bg, container, fontStyle } from '../styles/styles';
 import { Roboto } from '../styles/fonts';
 
 const app = new Frog({
@@ -78,26 +78,17 @@ const enkryptDesc =
 const storedAnswers: number[] = [];
 let questionNum = 0;
 
-function EnkryptLogo() {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        position: 'absolute',
-        top: '3vh',
-        left: '3vw',
-      }}
-    >
-      <img src='/enkrypt.png' alt='Enkrypt Logo' width={133} height={26} />
-    </div>
-  );
-}
-
 app.frame('/', c => {
   return c.res({
     image: (
       <div style={container}>
-        <EnkryptLogo />
+        <img
+          alt='background'
+          src='/background.png'
+          width={'100%'}
+          height={'100%'}
+          style={bg}
+        />
         <div style={fontStyle}>{app.title}</div>
       </div>
     ),
@@ -125,7 +116,13 @@ app.frame('/questions', c => {
   return c.res({
     image: (
       <div style={container}>
-        <EnkryptLogo />
+        <img
+          alt='background'
+          src='/background.png'
+          width={'100%'}
+          height={'100%'}
+          style={bg}
+        />
         <div style={fontStyle}>{currentQuestion.question}</div>
       </div>
     ),
@@ -154,7 +151,13 @@ app.frame('/result', c => {
   return c.res({
     image: (
       <div style={{ ...container, flexDirection: 'row' }}>
-        <EnkryptLogo />
+        <img
+          alt='background'
+          src='/background.png'
+          width={'100%'}
+          height={'100%'}
+          style={bg}
+        />
         <img
           src={`/crypto/${cryptoValue.name}.png`}
           width={380}

@@ -16,15 +16,20 @@ export const fontStyle = {
 
 export const container = {
   alignItems: 'center',
-  background: enkryptBgColor,
-  backgroundSize: '100% 100%',
+  width: '100%',
+  height: '100%',
   display: 'flex',
   flexDirection: 'column',
   flexWrap: 'nowrap',
-  height: '100%',
   justifyContent: 'center',
   textAlign: 'center',
-  width: '100%',
+};
+
+export const bg = {
+  position: 'absolute',
+  zIndex: -1,
+  top: 0,
+  right: 0,
 };
 
 // NFT styles
