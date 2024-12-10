@@ -34,7 +34,7 @@ const questions = [
     answers: [
       { answer: 'DeFi', weight: '0' },
       { answer: 'Memecoins', weight: '1' },
-      { answer: 'What', weight: '2' },
+      { answer: '1) What', weight: '2' },
     ],
   },
   {
