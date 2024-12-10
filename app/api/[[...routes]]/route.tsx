@@ -13,7 +13,7 @@ const app = new Frog({
   basePath: '/api',
   // Supply a Hub to enable frame verification.
   // hub: neynar({ apiKey: 'NEYNAR_FROG_FM' })
-  title: 'How BASEd are you?',
+  title: 'What blockchain are you?',
   imageOptions: {
     // @ts-ignore
     fonts: [...Roboto],
@@ -22,55 +22,58 @@ const app = new Frog({
 
 const questions = [
   {
-    question: 'Moo Deng 🦛, Pesto 🐧 or Both?',
+    question: 'Onchain, on-chain or on chain?',
     answers: [
-      { answer: '🦛', weight: '0' },
-      { answer: '🐧', weight: '1' },
-      { answer: '🦛❤️️🐧', weight: '2' },
+      { answer: 'Onchain', weight: '0' },
+      { answer: 'On-Chain', weight: '1' },
+      { answer: 'On Chain', weight: '2' },
     ],
   },
   {
-    question: 'Gold, Silver or Bronze?',
+    question: 'DeFi or Memecoins?',
     answers: [
-      { answer: 'Gold', weight: '0' },
-      { answer: 'Silver', weight: '1' },
-      { answer: 'Bronze', weight: '2' },
+      { answer: 'DeFi', weight: '0' },
+      { answer: 'Memecoins', weight: '1' },
+      { answer: 'What', weight: '2' },
     ],
   },
   {
-    question: 'Yes, No or Maybe?',
+    question: "I'm in it for the…",
     answers: [
-      { answer: 'Yes', weight: '0' },
+      { answer: 'Tech', weight: '0' },
+      { answer: 'Memes', weight: '1' },
+      { answer: 'Money', weight: '2' },
+    ],
+  },
+  {
+    question: 'When did you start in crypto?',
+    answers: [
+      { answer: 'Post 2020', weight: '0' },
+      { answer: '2017-2020', weight: '1' },
+      { answer: 'Pre 2017', weight: '2' },
+    ],
+  },
+  {
+    question: 'Are you currently staking any crypto?',
+    answers: [
+      { answer: 'Maybe?', weight: '0' },
       { answer: 'No', weight: '1' },
-      { answer: 'Maybe', weight: '2' },
-    ],
-  },
-  {
-    question: 'Which MVP are you?',
-    answers: [
-      { answer: 'Katya', weight: '0' },
-      { answer: 'Kealii', weight: '1' },
-      { answer: 'Marcus', weight: '2' },
-    ],
-  },
-  {
-    question: 'Vince, VinceM or The Major?',
-    answers: [
-      { answer: 'Vince', weight: '0' },
-      { answer: 'VinceM', weight: '1' },
-      { answer: 'The Major', weight: '2' },
+      { answer: 'Yes', weight: '2' },
     ],
   },
 ];
 const crypto = [
-  { name: 'Bitcoin', desc: 'You are slow but very valuable.' },
-  { name: 'Ethereum', desc: 'You are fast and always adapting to new things.' },
-  { name: 'Polkadot', desc: 'You are complex and quick to embrace new ideas.' },
-  { name: 'Litecoin', desc: 'You are quick and cheap.' },
-  { name: 'Dogecoin', desc: 'You are the goodest doggo.' },
+  { name: 'Dogecoin', desc: "It's giving fun to be around." },
+  { name: 'Solana', desc: 'Not afraid to embrace your silly side!' },
+  {
+    name: 'Ethereum',
+    desc: 'You adapt to challenges and are not afraid to try new things.',
+  },
+  { name: 'Bitcoin', desc: 'A reliable leader, the people love you!' },
+  { name: 'Base', desc: 'Basically very based.' },
 ];
 const enkryptDesc =
-  'Easily manage your {crypto} with Enkrypt! The most user-friendly multichain wallet!';
+  'Easily manage your {crypto} with our multichain browser wallet Enkrypt!';
 
 const storedAnswers: number[] = [];
 let questionNum = 0;
