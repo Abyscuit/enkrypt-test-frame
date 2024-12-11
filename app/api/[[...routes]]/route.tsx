@@ -142,11 +142,7 @@ app.frame('/questions', c => {
 });
 
 app.frame('/result', c => {
-  let result = 0;
-  for (const element of storedAnswers) {
-    result += element;
-  }
-  result = result % crypto.length;
+  const result = calculateResult();
   const cryptoValue = crypto[result];
   return c.res({
     image: (
@@ -191,6 +187,16 @@ app.frame('/result', c => {
     ],
   });
 });
+
+function calculateResult(): number {
+  let sum = 0;
+  for (const element of storedAnswers) {
+    sum += element;
+  }
+  sum = Math.floor(sum / 2);
+  if (sum > crypto.length - 1) sum = crypto.length - 1;
+  return sum;
+}
 
 devtools(app, { serveStatic });
 
