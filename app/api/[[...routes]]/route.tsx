@@ -22,27 +22,27 @@ const app = new Frog({
 
 const questions = [
   {
-    question: 'Onchain, on-chain or on chain?',
+    question: 'On chain, on-chain or onchain?',
     answers: [
-      { answer: 'Onchain', weight: '0' },
+      { answer: 'On Chain', weight: '0' },
       { answer: 'On-Chain', weight: '1' },
-      { answer: 'On Chain', weight: '2' },
+      { answer: 'Onchain', weight: '2' },
     ],
   },
   {
-    question: 'DeFi or Memecoins?',
+    question: 'Memecoins or DeFi?',
     answers: [
-      { answer: 'DeFi', weight: '0' },
-      { answer: 'Memecoins', weight: '1' },
+      { answer: 'Memecoins', weight: '0' },
+      { answer: 'DeFi', weight: '1' },
       { answer: '1) What', weight: '2' },
     ],
   },
   {
     question: "I'm in it for the…",
     answers: [
-      { answer: 'Tech', weight: '0' },
-      { answer: 'Memes', weight: '1' },
-      { answer: 'Money', weight: '2' },
+      { answer: 'Memes', weight: '0' },
+      { answer: 'Money', weight: '1' },
+      { answer: 'Tech', weight: '2' },
     ],
   },
   {
